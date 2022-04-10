@@ -21,7 +21,7 @@ export default function Home() {
     const linksHTML = data.links.map((pack,index)=>{
             if(pack.site ==="ROJA"){
                 // console.log(pack)
-                return pack.streams.map((link, index)=><><a href={link} target="_blank" rel="noopener noreferrer" key={index}>{index}</a><br/></>)
+                return pack.streams.map((link, index)=><><a href={link} target="_blank" rel="noopener noreferrer" key={index}>{pack.site}:{index}</a><br/></>)
             }
 
             return <><a href={pack.streams} target="_blank" rel="noopener noreferrer" key={index}>{pack.site}</a><br/></>
